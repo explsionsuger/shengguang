@@ -1,0 +1,90 @@
+@charset "utf-8";
+
+section.content_wrap .title{
+	width: 583px;
+	height: 129px;
+	margin: 0 auto;
+	padding: 44px 29px;
+}
+section.content_wrap .title h2{
+	font-size: 30px;
+	font-family: "微软雅黑";
+}
+section.content_wrap .heart_eye{
+	width: 100%;
+	text-align: right;
+	font-size: 22px;
+	color: #c5c5c5;
+}
+section.content_wrap .title .a1{
+	margin-right: 31px;
+}
+section.content_wrap .title a{
+	font-size: 22px;
+	color: #c5c5c5;
+}
+section.content_wrap .title .a3{
+	font-size: 22px;
+	color: #b20000;
+}
+section.content_wrap .title>span{
+	font-size: 22px;
+	color: #c5c5c5;
+}
+section.content_wrap .art{
+	width: 583px;
+	margin: 0 auto;
+	margin-bottom:29px ;
+}
+section.content_wrap .art .p3{
+	font-size: 20px;
+	font-family: "微软雅黑";
+}
+section.content_wrap .art+img{
+	margin-left: 29px;
+	margin-top: 35px;
+	margin-bottom: 48px;
+	
+}
+section.content_wrap .function{
+	margin-bottom: 57px;
+}
+.function{
+		
+}
+.function ul{
+	width: 327px;
+	height: 104px;
+	margin: 0 auto;
+}
+.function ul li {
+	width: 72px;
+	float: left;
+	margin-left: 55px;
+}
+.function ul li:first-child{
+	margin-left: 0;
+}
+.function ul li .circle{
+	width: 72px;
+	height: 72px;
+	line-height: 72px;
+	text-align: center;
+	display: inline-block;
+	vertical-align: middle;
+	border-radius: 50%;
+	border: 3px solid #c5c5c5;
+}
+.function ul li span{
+	font-size: 20px;
+	color:#C5C5C5;
+	display: inline-block;
+	width: 72px;
+	text-align: center;
+}
+
+section.content_wrap .function ul li .fa{
+		font-size: 32px;
+		color: #C5C5C5;
+		vertical-align: middle;
+}

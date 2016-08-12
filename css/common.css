@@ -1,0 +1,509 @@
+html,body{height: 100%;}
+.web_wrap{
+	height: 100%;
+	position: relative;
+	overflow: hidden;
+	width: 640px;
+	margin: 0 auto;
+}
+.web{
+	height: 100%;
+}
+/*页面头部容器*/
+.web header{
+	position: absolute;
+	top: 0;
+	width: 100%;
+	height: 89px;
+	background: #b20000;
+}
+
+header i.fa{
+	color:white;
+	font-size:30px;
+}
+header .left{
+	float: left;
+	margin-left: 24px;
+	margin-top: 25px;
+	position: relative;
+}
+header .left .fa{
+	font-size:40px;
+}
+header .left span{
+	position: absolute;
+	left:23px;
+	top:-12px;
+	width:26px;
+	height: 26px;
+	line-height: 26px;
+	text-align: center;
+	background: #ff0000;
+	font-size: 12px;
+	-webkit-border-radius: 50%;
+	border-radius: 50%;
+	color: #FFFFFF;
+}
+
+header .right{
+	float: right;
+	padding: 6px;
+	margin-right: 17px;
+	margin-top:22px;
+	border: 2px solid #FFFFFF;
+	-webkit-border-radius: 50%;
+	border-radius: 50%;
+}
+
+header .center{
+	height: 89px;
+	line-height: 89px;
+	text-align: center;
+}
+header .center img{
+	display: inline-block;
+	vertical-align:middle;
+}
+
+/*页面主体内容容器*/
+.web .content_wrap{
+	position: absolute;
+	top: 89px;
+	bottom:95px;
+	width: 100%;
+	overflow-y:scroll;
+	/*优化移动端的滚动体验*/
+	-webkit-overflow-scrolling: touch;
+}
+/*页面底部容器*/
+.web  footer{
+	position: absolute;
+	bottom: 0;
+	height: 95px;
+	width: 100%;
+	background: #f5f5f5;
+	border-top:1px solid #c8c6c7;
+}
+footer ul {
+	height: 100%;
+}
+footer ul li {
+	float: left;
+	height: 100%;
+	width: 20%;
+	text-align: center;
+	padding-top: 16px;
+}
+footer ul li .fa{
+	font-size:45px;
+	color: #8b8b8b;
+	
+}
+footer ul li span{
+	display: block;
+	font-size:20px;
+	color: #8b8b8b;
+	text-align: center;
+	margin-top: 5px;
+}
+footer ul li .fa,
+footer ul li span{
+	-webkit-transition: all 300ms ease-in;
+	transition: all 300ms ease-in;
+}
+
+
+footer a:hover .fa,
+footer a:hover span,
+footer a.active .fa,
+footer a.active span
+{
+	color: #b60207;
+}
+
+.hide_input{
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: -99;
+	opacity: 0;
+}
+.clearfix::after{
+	content:"";
+	display: block;
+	clear: both;
+}
+.page{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	left: 0;
+	top:0;
+	background: black;
+	z-index: 1;
+	transition: all 300ms ease-out;
+	overflow: hidden;
+}
+/*登录窗口*/
+.page.login{
+	
+	-webkit-transform: translateX(-100%);
+	transform: translateX(-100%);
+}
+/*登录弹层进场状态*/
+#login:checked~.login{
+	-webkit-transform: translateX(0);
+	transform: translateX(0);
+}
+.login .left{/*叉按钮*/
+	float:left;
+	width: 50px;
+	height: 50px;
+	line-height: 50px;
+	text-align: center;
+	background: #b60005;
+	border-radius: 50%;
+	margin-left: 13px;
+	margin-top: 20px;
+}
+/*登录弹层样式*/
+.login .left+img{
+	margin-top: 143px;
+	margin-left: 198px;
+}
+.login .text i{
+	margin-left: 417px;
+	margin-top: 25px;
+	font-size: 14px;
+	color: white;
+}
+
+.login .text .user{
+	font-size: 14px;
+	width: 391px;
+	height: 53px;
+	padding-left: 39px;
+	background: #3d3d3d;
+	letter-spacing: 2px;
+	border: none;
+	color: white;
+}
+.login .text{
+	margin-left: 73px;
+	margin-top: 47px;
+}
+.login .button1{
+	margin-top: 58px;
+}
+
+.login input[type="button"]{
+	width: 491px;
+	height: 54px;
+	font-size: 23px;
+	letter-spacing: 12px;
+	color: #cdcdcd;
+	background: #303030;
+	margin-bottom: 15px;
+}
+.login .button1 span{
+	display: block;
+	width: 491px;
+	height: 54px;
+	font-size: 23px;
+	letter-spacing: 12px;
+	color: #cdcdcd;
+	background: #303030;
+	margin-bottom: 15px;
+	text-align: center;
+	line-height: 54px;
+}
+.login input[type="button"]:hover,.button1 .login:hover{
+	background: #B20000;
+}
+
+/***用户信息弹窗样式***/
+.page.user {/*用户信息弹层一开始在页面的左侧*/
+	-webkit-transform: translateX(-100%);
+	transform: translateX(-100%);
+	background:#222222;
+}
+
+/*用户信息弹层进场状态*/
+#user:checked~.user{
+	-webkit-transform: translateX(0);
+	transform: translateX(0);
+}
+/*用户信息样式*/
+.user .absolu{
+	width: 100%;
+	height: 450px;
+	position: absolute;
+	left: 0;
+	top: 0px;
+	background: #222222;
+	border-bottom:20px solid #303030;
+}
+.user .absolu .search{
+	margin: 0 auto;
+	width: 616px;
+	height: 89px;
+	
+	border-bottom: 1px solid #464646;
+}
+
+.person .head_img{
+	width: 130px;
+	height: 130px;
+	border-radius: 50%;
+	overflow: hidden;
+	margin: 0 auto;
+}
+.person .head_img img{
+	width: 100%;
+}
+.person .head_warp{
+	width: 135px;
+	height: 130px;
+	position: relative;
+	margin: 32px auto 14px;
+}
+.person .tips{
+	position: absolute;
+	right: 0;
+	top: 0;
+	width: 34px;
+	height: 34px;
+	background: #FF0000;
+	color: white;
+	text-align: center;
+	line-height: 34px;
+	border-radius: 50px;
+	font-size: 20px;
+}
+
+.user .absolu .person .p1{
+	font-size: 24px;
+	margin: 0 auto;
+	margin-top: 15px;
+	text-align: center;
+	color: white;
+}
+.user .absolu .person .a1{
+	font-size: 14px;
+	padding: 3px 12px;
+	border: 1px solid white;
+	color: white;
+	margin-left: 10px;
+} 
+.user .absolu .p1+img{
+	margin-top:10px ;
+	margin-left: 257px;
+}
+.user .absolu .p2{
+	margin-left: 250px;
+	margin-top: 0px;
+	font-size: 23px;
+	line-height: 23px;
+	color: white;
+}
+.user .absolu .p2 span{
+	color: #b60005;
+}
+.user .absolu .button3,.button4{
+	font-size: 23px;
+	padding: 15px 60px;
+	background:#cdcdcd ;
+	color: white;
+	border-radius: 50px;
+	margin-left: 90px;
+	margin-top: 15px;
+}
+.user .absolu .button4{
+	margin-left: 30px;
+}
+.user .absolu .button3:hover,
+.button4:hover{
+	background: #B60005;
+}
+.user .user_nav{
+	padding: 0 33px 0 31px;
+	position: absolute;
+	top: 500px;
+	left: 30px;
+	overflow-y: scroll;
+	width: 90%;
+}
+.user .user_nav .nav_title h2{
+	height: 73px;
+	line-height: 73px;
+	border-bottom: 1px solid #2D2D2D;
+	color: #7f7f7f;
+	font-size: 23px;
+}
+.user .user_nav .nav_title h2 .fa{
+	font-size: 24px;
+	margin-top: 24px;
+}
+.user .user_nav .nav_title ul{
+	padding-left: 85px;
+	padding-right: 57px;
+	
+}
+.user .user_nav .nav_title li{
+	line-height: 89px;
+	height: 89px;
+	border-bottom: 1px solid #2f2f2f;
+	color: white;
+	font-size: 21px;
+	text-align: center;
+}
+
+.user .button5{
+	position: absolute;
+	left: 236px;
+	bottom: 35px;
+	font-size: 23px;
+	padding: 15px 60px;
+	background:#B60005 ;
+	color: white;
+	border-radius: 50px;
+}
+
+/***搜索弹窗样式***/
+.page.search{/*一开始在主页面的上方隐藏*/
+	-webkit-transform: translateY(-100%);
+	transform: translateY(-100%);
+	
+}
+#search:checked~.search{
+	-webkit-transform: translateY(0);
+	transform: translateY(0);
+}
+
+/**弹出的共用头部**/
+.page_head{
+	padding-bottom: 16px;
+	border-bottom: 1px solid #303030;
+}
+.page_head .left{/*叉按钮*/
+	float:left;
+	width: 50px;
+	height: 50px;
+	line-height: 50px;
+	text-align: center;
+	background: #b60005;
+	border-radius: 50%;
+	margin-left: 13px;
+	margin-top: 20px;
+}
+
+.page_head .left .fa{
+	color: white;
+	font-size: 34px;
+	vertical-align: middle;
+}
+.page_head .right {/*搜索框*/
+	float: right;
+	width: 532px;
+	height: 49px;
+	-webkit-border-radius: 25px;
+	border-radius: 25px;
+	border: 2px solid white;
+	margin-right: 20px;
+	margin-top: 19px;
+}
+.page_head .right button{/*search按钮*/
+	padding-left: 15px;
+	padding-top: 11px;
+	background: none;
+}
+.page_head .right button .fa{
+	font-size:29px;
+	color: #FFFFFF;
+}
+.page_head .right input{
+	line-height: 49px;
+	font-size: 27px;
+	color: #FFFFFF;
+	width: 480px;
+	border: none;
+	background: none;
+	padding: 0 17px;
+	box-sizing:border-box;
+}
+.page_head .right input::-webkit-input-placeholder{/*控制input框中的提示语*/
+	font-size:29px;
+}
+.page_body{
+	position: relative;
+	height: 100%;
+	background: #f1f1f1;
+}
+
+/*弹出窗体的主体内容*/
+.page_search_index{
+	padding: 30px;
+	height: 100%;
+}
+.page_search_index h2{
+	font-size: 27px;
+	color: #211d1d;
+}
+
+.page_search_index .keyword_list{
+	margin-top: 16px;
+	/*text-align: justify;*//*把容器中的内容往左右两边平均分配间隔*/
+}
+.page_search_index .keyword_list a{
+	display: inline-block;/*行内块级元素，具有行内和块级元素的特性*/
+	padding: 13px 18px;
+	border: #e4e4e4 1px solid;
+	background: #ffffff;
+	margin-right: 8px;
+	margin-bottom: 10px;
+	color: #8b8b8b;
+	font-size: 29px;
+}
+
+.page_search_list{/*搜索记录弹窗开始状态*/
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	background: #f1f1f1;
+	padding: 35px 30px;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	left:0;
+	top:0;
+	-webkit-transform: translateY(100%);
+	transform: translateY(100%);
+	transition:all 300ms ease-out;
+	overflow-y: scroll;
+}
+#page_search_list:checked ~.page_search_list{/*搜索记录弹窗结束状态*/
+	-webkit-transform: translateY(0);
+	transform: translateY(0);
+}
+
+.page_search_list .item{
+	padding:23px 17px;
+	background: white;
+	color: #898989;
+	margin-bottom: 14px;
+}
+
+.page_search_list .item h2{
+	font-size: 27px;
+	color: #595757;
+}
+.page_search_list .item p{
+	margin-top: 22px;
+	font-size: 22px;
+	line-height: 30px;
+	margin-bottom: 16px;
+}
+.page_search_list .item span{
+	font-size:18px;
+	margin-right:32px;
+}
